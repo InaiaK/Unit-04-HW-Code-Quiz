@@ -8,9 +8,15 @@ var option2 = document.querySelector("#op2");
 var option3 = document.querySelector("#op3");
 var option4 = document.querySelector("#op4");
 var timerEl = document.getElementById("timer");
+var correct = document.querySelector(".correct-wrong");
+option1.addEventListener("click",checkAnswer);
+option2.addEventListener("click",checkAnswer);
+option3.addEventListener("click",checkAnswer);
+option4.addEventListener("click",checkAnswer);
+
 // Question
 var questionList =[
-    {
+{
         "q":"What is the extension of HTML file ?",
         "option1":"hml",
         "option2":"html",
@@ -63,6 +69,7 @@ var questionList =[
 var currentQ = 0;
 var currentObject;
 var timer = 60;
+var score = 0;
 //Hide
 quizContainer.style.display = "none";
 results.style.display ="none";
@@ -72,7 +79,7 @@ startBtnEl.addEventListener('click',function(){
     startBtnEl.style.display = "none";
     toDisplayQuestion();
     currentObject = setInterval(function(){
-        timerEl.textContent=timer
+        timerEl.textContent= "Time Left: "+ timer;
         if(timer> 1){
             timer-- ;
         }else {
@@ -92,7 +99,27 @@ function toDisplayQuestion(){
 }
 
 function displayresults(){
-    
+
+}
+
+function checkAnswer(){
+  var userSelection = this.textContent;
+  console.log(userSelection);
+  if(userSelection ==questionList[currentQ].answer){
+     score+=5
+     correct.textContent="correct"
+
+  }else{
+      timer-=5  
+      
+      correct.textContent="wrong"
+  }
+  if(currentQ < questionList.length-1){
+      currentQ++
+      toDisplayQuestion()
+  }else{
+      displayresults()
+  }
 }
 // Quiz Rules
 
