@@ -7,7 +7,7 @@ var option1 = document.querySelector("#op1");
 var option2 = document.querySelector("#op2");
 var option3 = document.querySelector("#op3");
 var option4 = document.querySelector("#op4");
-
+var timerEl = document.getElementById("timer");
 // Question
 var questionList =[
     {
@@ -61,6 +61,8 @@ var questionList =[
 ]
 //
 var currentQ = 0;
+var currentObject;
+var timer = 60;
 //Hide
 quizContainer.style.display = "none";
 results.style.display ="none";
@@ -68,7 +70,16 @@ results.style.display ="none";
 startBtnEl.addEventListener('click',function(){
     quizContainer.style.display = "block";
     startBtnEl.style.display = "none";
-    toDisplayQuestion()
+    toDisplayQuestion();
+    currentObject = setInterval(function(){
+        timerEl.textContent=timer
+        if(timer> 1){
+            timer-- ;
+        }else {
+            displayresults()
+        }
+
+    },1000)
 })
 
 
@@ -78,6 +89,10 @@ function toDisplayQuestion(){
      option2.textContent = questionList[currentQ].option2
      option3.textContent = questionList[currentQ].option3
      option4.textContent = questionList[currentQ].option4
+}
+
+function displayresults(){
+    
 }
 // Quiz Rules
 
