@@ -5,17 +5,20 @@
 
 
     header {
-    padding: 40px;
+    padding: 30px;
     text-align: center;
-    background: radial-gradient(circle, rgb(155, 140, 240) 0%, rgba(18, 95, 238, 0.836) 100%);
+    background: radial-gradient(circle,rgba(62, 182, 230, 0.836)  0%,rgb(155, 140, 240)  100%);
     color: rgb(12, 11, 11);
-    border-bottom:30px #879274;
   }
 
-.info ul{
-    background:  rgb(155, 140, 240); 
- }
+
+ul {
+        font-size: 20px;
+   }
   
+ .start-button{
+     font-size: 20px;
+ }
 
   body {
     margin: 0;
@@ -23,115 +26,79 @@
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background: linear-gradient(0deg, rgb(155, 140, 240) 0%, rgba(237,245,249,1) 63%);
+   }
+  
+  .card {
+    background:radial-gradient(circle,rgba(62, 182, 230, 0.836)  0%,rgb(155, 140, 240)  100%);
+    border: 1px solid #eceff1;
+    border-radius: 8px;
+    margin: auto;
+    padding: 20px;
   }
   
-  .start-over {
-    font-size: 16px;
-    height: 30px;
-    line-height: 8px;
-    margin-top: 20px;
+  #timer {
+    height: 50px;
+    padding: 10px;
+    background: #edebf3;
+    color: black;
+    text-align: center;
   }
   
-  .option-container{
+  .timer-text {
+    font-size: 20px;
+    padding: 25px;
+  }
+
+   .option-container{
     display: flex;
     justify-content: space-around; 
-    margin: 10px;
+    margin: 40px;
     padding: 5px;
-    width: 80vw;
-    height: 20vh;
-    background-color: #9eb1b3;   
-        
+    width: 90%;
+    height: 140%;
+    background-color:   rgb(155, 140, 240);
 }
-.option{    
-    padding: 10px;
-    width: 15vw;
-    height: 10vh;
+
+button.option{    
+    padding: 5px;
+    width: 150px;
+    height: 120px;
     font-size: larger;
     background-color: lightskyblue;
-    border-radius: 25%;
+    border-radius: 15%;
 }
 .option:hover{
-    background-color: lightgoldenrodyellow;
+    background-color: lightgoldenrodyellow;}
 
-
-
-  .win-loss-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-  }
-  
-  button {
-    background: radial-gradient(circle, rgb(155, 140, 240) 0%, rgba(237,245,249,1) 100%);
-    border-radius: 8px;
-    color: #13293d;
-    cursor: pointer;
-    font-size: 2em;
-    letter-spacing: 0.21px;
-    line-height: 16px;
-    max-width: 255px;
-    padding: 20px 52px;
-    text-align: center;
-    transition-duration: 0.15s;
-    transition-property: background-color;
-    transition-timing-function: linear;
-    margin-top: 0.6em;
-  }
-  
-
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
+h3{
+    font-size: 20px;
+}
+ 
   section {
+      font-size: 22px;
     flex: 0 auto;
-    padding: 8px;
-    margin-top: 50px;
+    padding: 18px;
+    margin-top: 60px;
     background-color: white;
     border-radius: 8px;
   }
   
-  .first-question {
-    width: 55vw;
-    height: 400px;
-  }
-  
+.container{
+font-size: 22px;
+  flex: 0 auto;
+  padding: 18px;
+  margin-top: 60px;
+  background-color: white;
+  border-radius: 8px;
+}
+
   .results {
     width: 30vw;
     height: 400px;
   }
   
-  .card {
-    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,124,33,0.604079131652661) 100%);
-    border: 1px solid #eceff1;
-    border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  
-  .title{
-    font-size: 3.5em;
-    text-align:center;
-  }
-  
-  .timer {
-    height: 140px;
-    padding: 10px;
-    background: #390bb6;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .timer-text {
-    padding: 55px;
-  }
+
+
   
   @media screen and (max-width: 1183px) {
     main {
