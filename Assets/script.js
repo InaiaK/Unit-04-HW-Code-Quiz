@@ -9,23 +9,27 @@ var option3 = document.querySelector("#op3");
 var option4 = document.querySelector("#op4");
 var timerEl = document.getElementById("timer");
 var correct = document.querySelector(".correct-wrong");
+var submitBtnEl = document.querySelector(".submit-button");
+var getScore = document.querySelector(".score");
+submitBtnEl.addEventListener("click",score);
 option1.addEventListener("click",checkAnswer);
 option2.addEventListener("click",checkAnswer);
 option3.addEventListener("click",checkAnswer);
 option4.addEventListener("click",checkAnswer);
 
+
 // Question
 var questionList =[
 {
-        "q":"Which of the following tags instructs the browser to expect a well-formed HTML document? ?",
-        "option1":"<body>",
-        "option2":"<head>",
-        "option3":"<div>",
-        "option4":"<!DOCTYPE html>",
-         "answer":"<!DOCTYPE html>"
+        "q":"01- What does HTML stand for?",
+        "option1":"<Home Tool Markup Language.>",
+        "option2":"<Hyper Text Markup Language.",
+        "option3":"<Hyperlinks and Text Markup Language.>",
+        "option4":"<HTML>",
+         "answer":"<Hyper Text Markup Language.>"
     },
     {
-        "q":"The following HTML code should only exist within which of the following tags? <title>Codecademy</title> ",
+        "q":"02- The following HTML code should only exist within which of the following tags? <title>Codecademy</title> ",
         "option1":"<h1>",
         "option2":"<head>",
         "option3":"<body>",
@@ -33,7 +37,7 @@ var questionList =[
          "answer":"<head>"
     },
     {
-        "q":"What does CSS stand for ?",
+        "q":"03- What does CSS stand for ?",
         "option1":"Cascading Style Sheets",
         "option2":"Cascading Style Style",
         "option3":"Cascading Sheets Style ",
@@ -41,7 +45,7 @@ var questionList =[
          "answer":"Cascading Style Sheets"
     },
     {
-        "q":"Inside which HTML element do we put the JavaScript?",
+        "q":"04- Inside which HTML element do we put the JavaScript?",
         "option1":"<js>",
         "option2":"<javascript>",
         "option3":"<scripting>",
@@ -49,7 +53,7 @@ var questionList =[
          "answer":"<script>"
     },
     {
-        "q":"Which of the following is an advantage of using JavaScript?",
+        "q":"05- Which of the following is an advantage of using JavaScript?",
         "option1":"Less server interaction.",
         "option2":"Immediate feedback to the visitors.",
         "option3":"Increased interactivity.",
@@ -57,7 +61,7 @@ var questionList =[
          "answer":"All of the options."
     },
     {
-        "q":"Which Of The Dialog Box Display a Message And a Data Entry Field ?",
+        "q":"06- Which Of The Dialog Box Display a Message And a Data Entry Field ?",
         "option1":"Alert()",
         "option2":"Prompt()",
         "option3":"tConfirm()",
@@ -70,10 +74,12 @@ var currentQ = 0;
 var currentObject;
 var timer = 60;
 var score = 0;
+
 //Hide
 quizContainer.style.display = "none";
 results.style.display ="none";
 
+// Start timer & Quiz
 startBtnEl.addEventListener('click',function(){
     quizContainer.style.display = "block";
     startBtnEl.style.display = "none";
@@ -83,12 +89,10 @@ startBtnEl.addEventListener('click',function(){
         if(timer> 1){
             timer-- ;
         }else {
-            displayresults()
-        }
-
+            clearInterval(timer);
+            }
     },1000)
 })
-
 
 function toDisplayQuestion(){
      containerQuestions.textContent=questionList[currentQ].q;
@@ -98,48 +102,25 @@ function toDisplayQuestion(){
      option4.textContent = questionList[currentQ].option4
 }
 
-function displayresults(){
-
-}
+    //  timer - local storage
+    //name function  - input form
+    // corret .
+// Check if  is correct or wrong 
 
 function checkAnswer(){
   var userSelection = this.textContent;
   console.log(userSelection);
   if(userSelection ==questionList[currentQ].answer){
      score+=5
-     correct.textContent="correct"
-
+     correct.textContent="Correct"
   }else{
       timer-=5  
-      
-      correct.textContent="wrong"
+      correct.textContent="Wrong"
   }
   if(currentQ < questionList.length-1){
       currentQ++
       toDisplayQuestion()
   }else{
-      displayresults()
+    displaysubmitBtnEl()
   }
 }
-// Quiz Rules
-
-// Start Button
-
-// Start the time
-
-// Questions will be asked
-
-// Answer Options
-
-//Select one answer
-
-// Answer is Correct or Wrong
-
-// Add to the Score
-
-// Submit Quiz button 
-
-// Add Name , show score and save both.
-
-//  Ask to Start Over 
-
