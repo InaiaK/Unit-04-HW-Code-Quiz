@@ -17,52 +17,52 @@ option4.addEventListener("click",checkAnswer);
 // Question
 var questionList =[
 {
-        "q":"What is the extension of HTML file ?",
-        "option1":"hml",
-        "option2":"html",
-        "option3":"tml",
-        "option4":"css",
-         "answer":"html"
+        "q":"Which of the following tags instructs the browser to expect a well-formed HTML document? ?",
+        "option1":"<body>",
+        "option2":"<head>",
+        "option3":"<div>",
+        "option4":"<!DOCTYPE html>",
+         "answer":"<!DOCTYPE html>"
     },
     {
-        "q":"What is the extension of HTML file ?",
-        "option1":"hml",
-        "option2":"html",
-        "option3":"tml",
-        "option4":"css",
-         "answer":"html"
+        "q":"The following HTML code should only exist within which of the following tags? <title>Codecademy</title> ",
+        "option1":"<h1>",
+        "option2":"<head>",
+        "option3":"<body>",
+        "option4":"<!DOCTYPE html>",
+         "answer":"<head>"
     },
     {
-        "q":"What is the extension of HTML file ?",
-        "option1":"hml",
-        "option2":"html",
-        "option3":"tml",
-        "option4":"css",
-         "answer":"html"
+        "q":"What does CSS stand for ?",
+        "option1":"Cascading Style Sheets",
+        "option2":"Cascading Style Style",
+        "option3":"Cascading Sheets Style ",
+        "option4":"Cascading Sheets Sheets",
+         "answer":"Cascading Style Sheets"
     },
     {
-        "q":"What is the extension of HTML file ?",
-        "option1":"hml",
-        "option2":"html",
-        "option3":"tml",
-        "option4":"css",
-         "answer":"html"
+        "q":"Inside which HTML element do we put the JavaScript?",
+        "option1":"<js>",
+        "option2":"<javascript>",
+        "option3":"<scripting>",
+        "option4":"<script>",
+         "answer":"<script>"
     },
     {
-        "q":"What is the extension of HTML file ?",
-        "option1":"hml",
-        "option2":"html",
-        "option3":"tml",
-        "option4":"css",
-         "answer":"html"
+        "q":"Which of the following is an advantage of using JavaScript?",
+        "option1":"Less server interaction.",
+        "option2":"Immediate feedback to the visitors.",
+        "option3":"Increased interactivity.",
+        "option4":"All of the options.",
+         "answer":"All of the options."
     },
     {
-        "q":"What is the extension of HTML file - last ?",
-        "option1":"hml",
-        "option2":"html",
-        "option3":"tml",
-        "option4":"css",
-         "answer":"html"
+        "q":"Which Of The Dialog Box Display a Message And a Data Entry Field ?",
+        "option1":"Alert()",
+        "option2":"Prompt()",
+        "option3":"tConfirm()",
+        "option4":"Msg()",
+         "answer":"Prompt()"
     }
 ]
 //
