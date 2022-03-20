@@ -11,7 +11,6 @@ var timerEl = document.getElementById("timer");
 var correct = document.querySelector(".correct-wrong");
 var submitBtnEl = document.querySelector(".submit-button");
 var getScore = document.querySelector(".score");
-submitBtnEl.addEventListener("click",score);
 option1.addEventListener("click",checkAnswer);
 option2.addEventListener("click",checkAnswer);
 option3.addEventListener("click",checkAnswer);
@@ -102,11 +101,7 @@ function toDisplayQuestion(){
      option4.textContent = questionList[currentQ].option4
 }
 
-    //  timer - local storage
-    //name function  - input form
-    // corret .
-// Check if  is correct or wrong 
-
+// Answer WRONG is subtracted from the clock.
 function checkAnswer(){
   var userSelection = this.textContent;
   console.log(userSelection);
@@ -121,6 +116,18 @@ function checkAnswer(){
       currentQ++
       toDisplayQuestion()
   }else{
-    displaysubmitBtnEl()
+    toDisplayQuestion()
   }
 }
+
+
+function finalScore(){
+ if(questionList[currentQ]=answer){
+     score = 1++
+     correct.textContent="Correct"
+ } else {
+     score = 0
+     correct.textContent="Wrong"
+ }
+}
+

@@ -17,9 +17,12 @@ ul {
    }
   
  .start-button{
-     font-size: 20px;
+     font-size: 30px;
  }
 
+ .submit-button{
+  font-size: 30px;
+ }
   body {
     margin: 0;
     display: flex;
@@ -45,14 +48,14 @@ ul {
   }
   
   .timer-text {
-    font-size: 20px;
+    font-size: 40px;
     padding: 25px;
   }
 
    .option-container{
     display: flex;
     justify-content: space-around; 
-    margin: 40px;
+    margin: 80px;
     padding: 5px;
     width: 90%;
     height: 140%;
@@ -60,22 +63,25 @@ ul {
 }
 
 button.option{    
-    padding: 5px;
-    width: 150px;
-    height: 120px;
-    font-size: larger;
+    padding: 2px;
+    width: 190px;
+    height: 190px;
+    font-size: medium;
     background-color: lightskyblue;
     border-radius: 15%;
 }
 .option:hover{
-    background-color: lightgoldenrodyellow;}
+    background-color: whitesmoke;}
 
 h3{
-    font-size: 20px;
+    font-size: 25px;
+}
+h4{
+  font-size: 25px;
 }
  
   section {
-      font-size: 22px;
+    font-size: 22px;
     flex: 0 auto;
     padding: 18px;
     margin-top: 60px;
@@ -83,51 +89,36 @@ h3{
     border-radius: 8px;
   }
   
-.container{
-font-size: 22px;
+.quiz-container{
+font-size: 20px;
   flex: 0 auto;
-  padding: 18px;
-  margin-top: 60px;
+  padding: 45px;
+  margin-top: 80px;
   background-color: white;
-  border-radius: 8px;
+  border-radius: 5px;
 }
 
   .results {
     width: 30vw;
     height: 400px;
   }
-  
-
-
-  
+    
   @media screen and (max-width: 1183px) {
-    main {
+    body {
       flex-direction: column;
     }
-  
-    .first-question,
-    .results {
-      width: 90vw;
+
+    .option-container{
+      flex-direction: column;
     }
-  
-    section {
-      background-color: white;
-      margin: 20px auto;
-      width: 92vw;
-    }
+    
   }
   
   @media screen and (max-width: 504px) {
     .title {
       font-size: 2em;
     }
-  
-    .reset-button {
-      font-size: 12px;
-      width: 20px;
-      
-    }
-  
+   
     .timer {
       height: 200px;
     }
