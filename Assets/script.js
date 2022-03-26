@@ -125,17 +125,23 @@ function checkAnswer() {
         results.style.display = "block";
         timerEl.textContent = "Your are done! ";
         document.getElementById("finalscore").textContent="Your score"+ (timer+score)
+        document.querySelector(".score").style.display="none";
     }
 }
 
-
-function finalScore() {
-    if (questionList[currentQ] == answer) {
-        score += 10
-        correct.textContent = "Correct"
-    } else {
-        score = 0
-        correct.textContent = "Wrong"
-    }
+document.getElementById("user-submit").addEventListener("click",
+function () {
+    var userInitial = document.getElementById("userIni").value
+    console.log(userInitial)
+    var userPrevious = JSON(localStorage.getItem("codeQuiz")) || []
+    userPrevious.pus({
+        initals: userInitial,
+        score:(score+timer)
+    })
+    localStorage.setItem("codeQuiz",JSON.stringify(userPrevious))
+    document.querySelector(".score").style.display="none";
+    
 }
+)
+
 
